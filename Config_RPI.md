@@ -26,8 +26,8 @@ Es decir, cosas como, la instalacion del sistema operativo, la configuracion de 
 
 ## Software
 
-  ###Paquetes instalados
-  ###Librerias terceros
+  ### Paquetes instalados
+  ### Librerias terceros
 **WIP**  
 
 ## I2C: [alpha]
