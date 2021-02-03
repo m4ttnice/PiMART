@@ -1,9 +1,9 @@
-##////////TITLES///////////
+## ////////TITLES///////////
 # Title 1
 
 ## Title2
 
-##//////// TEXT FORMAT////////
+## //////// TEXT FORMAT////////
 
 **Strong/Bold**
 _this is italic_
@@ -11,7 +11,7 @@ _**MIX**example_**is**here
 
 to ~~corect~~ **correct**, it's a good practice to sow the previous error
 
-##////////// LIST TABLES ////////////////
+## ////////// LIST TABLES ////////////////
 
 LIST UNORDERED:
 * Item 1, no indent
@@ -37,15 +37,19 @@ TASK LIST:
 - [x] this is a complete item
 - [ ] this is an incomplete item
  
-##///////////////// LINKS IMG ////////////////////////// 
+## ///////////////// LINKS IMG ////////////////////////// 
  
  to add an URL link, it's can be done like this:
  https://github.com/m4ttnice/PiMART.git
  OR a more custom option like
  [PiMART repo](https://github.com/m4ttnice/PiMART.git)
+ 
+ AND add images:
+ 
+![MART Logo](/_Dump_Files/img/mart_icon.png)
+	
 
-
-##/////////////////// PAGE FORMAT /////////////////////
+## /////////////////// PAGE FORMAT /////////////////////
 you can split by lines
 
 ---
