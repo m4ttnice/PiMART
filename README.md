@@ -9,10 +9,10 @@ El sistema debe poseer las siguientes características, ordenadas por prioridad:
 
 1. [x] **RTC** (ds3231) para el RPI. La raspberry no tiene integrado reloj del sistema, para sistemas "aislados" se necesita añadir uno para tener un reloj sincronizado (dato indispensable para un sistema de telemetría). Utiliza bus i2c (0x68)
 1. [x] Bus **i2c** en el **RPI** (pruebas con RTC (ds3231 0x68) y IMU (mpu6050 0x69))
-1. [ ] **WIP** **i2c** para **C/C++** en la RPI (pruebas con RTC (ds3231) y IMU (mpu6050))
+1. [ ] (**WIP**) **i2c** para **C/C++** en la RPI (pruebas con RTC (ds3231) y IMU (mpu6050))
+1. [ ] Capacidad de recepción/transmisión mediante bus **CAN**, para comunicación con la **ECU**.
 1. [ ] **GPS** + **IMU** (proporcionados por TORSA) (DETERMINAR **MODELO y LIBRERÍAS** A UTILIZAR) (con un enlace al **datasheet** basta por ahora)
 1. [ ] **RPI** definitiva (proporcionados por TORSA) (DETERMINAR **MODELO, SO y CARACTERÍSTICAS** A UTILIZAR)
-1. [ ] Capacidad de recepción/transmisión mediante bus **CAN**, para comunicación con la **ECU**.
 1. [ ] Almacenamiento de datos recibidos por CAN desde ECU.
 1. [ ] Leer, en la RPI, el estado de los *botones del volante* (18), se pueden usar 2 opciones:
     - **Lectura directa**: se cablea cada interruptor a un pin **GPIO** o a una entrada de **multiplexor** y este a GPIO (en ppio más simple en SOFTWARE, más complicado en HARWARE [ **MUCHOS** cables desde el volante al RPI])
