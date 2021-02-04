@@ -38,6 +38,7 @@ Es decir, cosas como, la instalacion del sistema operativo, la configuracion de 
   1. Abrir Terminal de la RPI
     
   1. Ejecutar la siguiente línea de comandos `sudo raspi-config` para abrir la configuracion de la RPI. Se abre una pantalla como la siguiente
+  
 ![Raspi-Config](/_Dump_Files/img/RASPICONFIG.PNG)
 ![I2C](/_Dump_Files/img/RASPICONFIG-I2C.PNG)
 ![I2C-ENA](/_Dump_Files/img/RASPICONFIG-I2C-ENA.PNG)        
@@ -61,9 +62,10 @@ Indicando el correcto funcionamiento del bus.
     
    1. Verificar la deteccion en la RPI del RTC:
         `sudo i2cdetect -y 1`
+        
 ![Addresses](/_Dump_Files/img/i2cdetect-example.PNG)
    
-   1.   Nos responde con la dirección 0x68 (entre otros), lo cual indica que el RTC y la RPI estan conectados.
+   1. Nos responde con la dirección 0x68 (entre otros), lo cual indica que el RTC y la RPI estan conectados.
    
    1. Se carga el modulo RTC en el kernel del sistema
     `sudo modprobe rtc-ds1307`
