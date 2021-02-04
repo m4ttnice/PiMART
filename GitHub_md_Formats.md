@@ -46,6 +46,8 @@ TASK LIST:
  
  AND add images:
  
+ <img src="/_Dump_Files/img/RASPICONFIG.PNG" width="512">  
+ 
 ![MART Logo](/_Dump_Files/img/mart_icon.png)
 	
 
