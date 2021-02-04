@@ -33,8 +33,14 @@ Es decir, cosas como, la instalacion del sistema operativo, la configuracion de 
 **WIP**  
 
 ## I2C: [alpha]
+  ### Primeros pasos
+  Habilitar el bus i2c en la RPI (por defecto viene deshabilitado)
+    1. Abrir Terminal de la RPI
+    2. Ejecutar la siguiente línea de comandos `sudo raspi-config` para abrir la configuracion de la RPI
+        
 
 ## RTC: ds3231 (i2c) [alpha]
+  
 
 ## IMU: MPU6050 (i2c) [alpha]
 
