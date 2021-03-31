@@ -1,4 +1,9 @@
 # Configurar RPI
+https://github.com/dwyl/iot-decibel-meter/issues/3
+https://user-images.githubusercontent.com/11833296/30482877-af3015fc-9a1c-11e7-9b65-a75c1b0a1f0d.png
+
+![RPI PinOUT](https://user-images.githubusercontent.com/11833296/30482877-af3015fc-9a1c-11e7-9b65-a75c1b0a1f0d.png)
+
 En este documento, se va a recoger todo lo relacionado a la configuracion de la Raspberry Pi (RPI a partir de ahora). En esta guia se ordenara de forma consecutiva todos los pasos a seguir para poner a punto la RPI con todo lo **NO** relacionado directamente con el programa principal.
 Es decir, cosas como, la instalacion del sistema operativo, la configuracion de este, GPIO's, librerias de terceros, etc.
 
@@ -111,8 +116,13 @@ Indicando el correcto funcionamiento del bus.
    
    1. Al cargar se puede ver la hora del sistema con `date`
    
+### Instalar y Configurar el bus Can (Libreria Can-utils)
+    Referencia : https://www.raspberrypi.org/forums/viewtopic.php?t=141052 
+    MCP2515 : https://ww1.microchip.com/downloads/en/DeviceDoc/MCP2515-Stand-Alone-CAN-Controller-with-SPI-20001801J.pdf
 
-    
+## AD1115(conversor analogico-digital) [alpha]
+https://www.ti.com/lit/ds/symlink/ads1113.pdf?ts=1617192483667&ref_url=https%253A%252F%252Fwww.google.com%252F
+
 ## IMU: MPU6050 (i2c) [alpha]
 
 
