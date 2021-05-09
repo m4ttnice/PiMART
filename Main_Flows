@@ -215,8 +215,9 @@
         "name": "Group 1",
         "tab": "134c4084.17c26f",
         "order": 1,
-        "disp": true,
-        "width": 6
+        "disp": false,
+        "width": "12",
+        "collapse": false
     },
     {
         "id": "273f8539.ca9a0a",
@@ -253,7 +254,44 @@
         "group": "50424f91.133e2",
         "order": 2,
         "width": "5",
-        "height": "5"
+        "height": "6"
+    },
+    {
+        "id": "b930fe7e.897db",
+        "type": "ui_group",
+        "name": "picture",
+        "tab": "",
+        "order": 9,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "509fcbb7.0a6bf4",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "b88fa9a0.2e20c8",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "655780e0.af3be",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "dc3b5974.450658",
+        "order": 1,
+        "width": "12",
+        "height": "6"
+    },
+    {
+        "id": "6bcaa27c.00d51c",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "dc3b5974.450658",
+        "order": 3,
+        "width": "12",
+        "height": "6"
     },
     {
         "id": "4e652aeb.c1fde4",
@@ -1889,15 +1927,15 @@
         "group": "b88fa9a0.2e20c8",
         "name": "Temperature",
         "order": 4,
-        "width": 0,
-        "height": 0,
-        "format": "\n\n<html>\n<body >\n    \n<p style=\"font-size: 28px;\"> Temperature: &nbsp;\n<span style=\"font-size: 40px;\">  {{msg.payload.valor}} </span>\n<span style=\"font-size: 28px;\"> ºC </span>\n</p>\n\n</body>\n</html>",
+        "width": "6",
+        "height": "2",
+        "format": "\n\n<html>\n<body >\n    \n<p style=\"font-size: 24px;\"> Temperature: &nbsp;\n<span style=\"font-size: 58px;\">  {{msg.payload.valor}} </span>\n<span style=\"font-size: 24px;\"> ºC </span>\n</p>\n\n</body>\n</html>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1250,
-        "y": 1160,
+        "x": 730,
+        "y": 840,
         "wires": [
             []
         ]
@@ -1912,8 +1950,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1090,
-        "y": 1160,
+        "x": 570,
+        "y": 840,
         "wires": [
             [
                 "e77a83b3.c5b9f",
@@ -1934,8 +1972,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
-        "y": 1200,
+        "x": 740,
+        "y": 880,
         "wires": []
     },
     {
@@ -2059,41 +2097,21 @@
         ]
     },
     {
-        "id": "de0de744.201638",
-        "type": "ui_template",
-        "z": "6e18a1eb.dbf44",
-        "group": "dc3b5974.450658",
-        "name": "FONDO",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "format": "<style> \n    \n    body{\n        background-image :url(\"/MARTLOGO.png\");\n        back-ground.size : 100% 100%\n    }\n</style>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1270,
-        "y": 960,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "724c7c1.e5f1684",
         "type": "ui_template",
         "z": "6e18a1eb.dbf44",
         "group": "b88fa9a0.2e20c8",
         "name": "OilPress",
         "order": 5,
-        "width": 0,
-        "height": 0,
-        "format": "\n\n<html>\n<body >\n\n<p style=\"font-size: 28px;\"> Presión Aceite: &nbsp;\n<span style=\"font-size: 40px;\">  {{msg.payload}} </span>\n<span style=\"font-size: 28px;\"> </span>\n</p>\n\n</body>\n</html>",
+        "width": "6",
+        "height": "2",
+        "format": "\n\n<html>\n<body >\n\n<p style=\"font-size: 24px;\"> Oil Pressure: &nbsp;\n<span style=\"font-size: 58px;\">  {{msg.payload}} </span>\n<span style=\"font-size: 24px;\"> </span>\n</p>\n\n</body>\n</html>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1258.265625,
-        "y": 1028.5,
+        "x": 700,
+        "y": 940,
         "wires": [
             []
         ]
@@ -2115,8 +2133,8 @@
         "topic": "",
         "payload": "58",
         "payloadType": "num",
-        "x": 970,
-        "y": 1020,
+        "x": 410,
+        "y": 940,
         "wires": [
             [
                 "724c7c1.e5f1684"
@@ -2150,22 +2168,23 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
-        "x": 1280,
-        "y": 1100,
+        "x": 760,
+        "y": 780,
         "wires": []
     },
     {
         "id": "8922270b.3abd18",
         "type": "function",
         "z": "6e18a1eb.dbf44",
-        "name": "Aviso Temperatura",
+        "name": "Aviso Temp",
         "func": "var valor = msg.payload;\nmsg.payload={};\n\nif (valor >= 0 && valor <= 35){\n    msg.payload=true;\n}\nelse if (valor >= 40){\nmsg.payload=false;\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1110,
-        "y": 1100,
+        "libs": [],
+        "x": 570,
+        "y": 780,
         "wires": [
             [
                 "96cc5451.3af9f8"
@@ -2189,12 +2208,97 @@
         "topic": "",
         "payload": "25",
         "payloadType": "num",
-        "x": 930,
-        "y": 1100,
+        "x": 410,
+        "y": 780,
         "wires": [
             [
                 "8922270b.3abd18",
                 "bc34841e.1a9af8"
+            ]
+        ]
+    },
+    {
+        "id": "6c6710e2.9d283",
+        "type": "inject",
+        "z": "6e18a1eb.dbf44",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 680,
+        "wires": [
+            [
+                "54bda67a.31ef88"
+            ]
+        ]
+    },
+    {
+        "id": "d9b4c4f9.4e0cd8",
+        "type": "ui_template",
+        "z": "6e18a1eb.dbf44",
+        "group": "dc3b5974.450658",
+        "name": "FONDO",
+        "order": 2,
+        "width": "12",
+        "height": "6",
+        "format": "\n \n <img width=\"100%\" height=\"100%\" alt=\"Image not found\" src=\"data:image/jpeg;base64,{{msg.payload}}\" />\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "x": 760,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b1ca0008.81539",
+        "type": "base64",
+        "z": "6e18a1eb.dbf44",
+        "name": "",
+        "action": "str",
+        "property": "payload",
+        "x": 620,
+        "y": 640,
+        "wires": [
+            [
+                "d9b4c4f9.4e0cd8"
+            ]
+        ]
+    },
+    {
+        "id": "54bda67a.31ef88",
+        "type": "file in",
+        "z": "6e18a1eb.dbf44",
+        "name": "",
+        "filename": "/home/pi/Pictures/fondomart.jpeg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 420,
+        "y": 680,
+        "wires": [
+            [
+                "b1ca0008.81539"
             ]
         ]
     }
