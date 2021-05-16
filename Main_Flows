@@ -131,7 +131,7 @@
         "site": {
             "name": "Node-RED Dashboard",
             "hideToolbar": "false",
-            "allowSwipe": "false",
+            "allowSwipe": "true",
             "lockMenu": "false",
             "allowTempTheme": "true",
             "dateFormat": "DD/MM/YYYY",
@@ -168,18 +168,9 @@
         "muxPort": "0"
     },
     {
-        "id": "2230de17.8b72a2",
-        "type": "ui_group",
-        "name": "Group 1",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": 6
-    },
-    {
         "id": "50424f91.133e2",
         "type": "ui_group",
-        "name": "Grupo1",
+        "name": "Alarmas y velocidad",
         "tab": "a1af9614.eae1e8",
         "order": 1,
         "disp": false,
@@ -253,18 +244,8 @@
         "name": "spacer",
         "group": "50424f91.133e2",
         "order": 2,
-        "width": "5",
-        "height": "6"
-    },
-    {
-        "id": "b930fe7e.897db",
-        "type": "ui_group",
-        "name": "picture",
-        "tab": "",
-        "order": 9,
-        "disp": true,
         "width": "6",
-        "collapse": false
+        "height": "3"
     },
     {
         "id": "509fcbb7.0a6bf4",
@@ -282,7 +263,7 @@
         "group": "dc3b5974.450658",
         "order": 1,
         "width": "12",
-        "height": "6"
+        "height": "3"
     },
     {
         "id": "6bcaa27c.00d51c",
@@ -291,7 +272,16 @@
         "group": "dc3b5974.450658",
         "order": 3,
         "width": "12",
-        "height": "6"
+        "height": "3"
+    },
+    {
+        "id": "c721dc1e.5354c",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "50424f91.133e2",
+        "order": 4,
+        "width": "6",
+        "height": 1
     },
     {
         "id": "4e652aeb.c1fde4",
@@ -349,7 +339,8 @@
         "y": 340,
         "wires": [
             [
-                "254f8f7d.1517c"
+                "254f8f7d.1517c",
+                "54bda67a.31ef88"
             ]
         ]
     },
@@ -1763,12 +1754,10 @@
         "z": "6e18a1eb.dbf44",
         "name": "",
         "events": "change",
-        "x": 1740,
-        "y": 700,
+        "x": 400,
+        "y": 580,
         "wires": [
-            [
-                "d029dd9b.b565d"
-            ]
+            []
         ]
     },
     {
@@ -1792,30 +1781,13 @@
         "topic": "",
         "payload": "Tab 2",
         "payloadType": "str",
-        "x": 1550,
-        "y": 760,
+        "x": 210,
+        "y": 640,
         "wires": [
             [
-                "d3f88ad8.9faf28",
-                "d029dd9b.b565d"
+                "d3f88ad8.9faf28"
             ]
         ]
-    },
-    {
-        "id": "d029dd9b.b565d",
-        "type": "debug",
-        "z": "6e18a1eb.dbf44",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1910,
-        "y": 780,
-        "wires": []
     },
     {
         "id": "9aa9e262.5186d",
@@ -1838,8 +1810,8 @@
         "topic": "",
         "payload": "RPM",
         "payloadType": "str",
-        "x": 1550,
-        "y": 700,
+        "x": 210,
+        "y": 580,
         "wires": [
             [
                 "d3f88ad8.9faf28"
@@ -1865,10 +1837,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "1",
+        "payload": "3",
         "payloadType": "str",
-        "x": 950,
-        "y": 780,
+        "x": 230,
+        "y": 900,
         "wires": [
             [
                 "3bf37784.002c08"
@@ -1889,8 +1861,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1260,
-        "y": 800,
+        "x": 500,
+        "y": 900,
         "wires": [
             []
         ]
@@ -1912,11 +1884,11 @@
         "topic": "",
         "payload": "240",
         "payloadType": "num",
-        "x": 950,
-        "y": 640,
+        "x": 210,
+        "y": 1060,
         "wires": [
             [
-                "e3f5ebb0.b4eb18"
+                "87bf4975.9e6628"
             ]
         ]
     },
@@ -1929,13 +1901,13 @@
         "order": 4,
         "width": "6",
         "height": "2",
-        "format": "\n\n<html>\n<body >\n    \n<p style=\"font-size: 24px;\"> Temperature: &nbsp;\n<span style=\"font-size: 58px;\">  {{msg.payload.valor}} </span>\n<span style=\"font-size: 24px;\"> ºC </span>\n</p>\n\n</body>\n</html>",
+        "format": "<div style=\"text-align: center;\">   \n<p>\n<span id=\"change1\" style=\"font-size: 60px;\">  {{msg.payload.Temperature}} </span>\n<span id=\"change2\" style=\"font-size: 60px;\"> ºC </span>\n</p>\n</div>\n\n<script>\n(function(scope){\n    \n\n    scope.$watch('msg',function (msg){\n        \n       myData = msg;\n       var div = document.getElementById('change1');\n       div.style.backgroundColor = myData.payload.Color;\n    \n       var div = document.getElementById('change2');\n       div.style.backgroundColor = myData.payload.Color;\n       \n    });\n\n})(scope);\n\n</script>\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 730,
-        "y": 840,
+        "x": 590,
+        "y": 740,
         "wires": [
             []
         ]
@@ -1945,13 +1917,14 @@
         "type": "function",
         "z": "6e18a1eb.dbf44",
         "name": "color fondo",
-        "func": "var valor = msg.payload;\nmsg.payload={};\n\nif (valor >= 0 && valor <= 40){\n    msg.payload.colorfondo= \"blue\";\n}\nelse if (valor >= 40 && valor <= 80){\nmsg.payload.colorfondo= \"yellow\";\n}\nelse if (valor >= 0 && valor <= 120){\nmsg.payload.colorfondo= \"red\";\n}\nmsg.payload.valor= valor;\nreturn msg;",
+        "func": "var valor = msg.payload.Temperature;\nmsg.payload={};\n\nif (valor >= 0 && valor <= 40){\n    msg.payload.Color= \"green\";\n}\nelse if (valor > 40 && valor <= 80){\nmsg.payload.Color= \"blue\";\n}\nelse if (valor > 80 && valor <= 120){\nmsg.payload.Color= \"red\";\n}\nmsg.payload.Temperature= valor;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 570,
-        "y": 840,
+        "libs": [],
+        "x": 430,
+        "y": 740,
         "wires": [
             [
                 "e77a83b3.c5b9f",
@@ -1964,7 +1937,7 @@
         "type": "debug",
         "z": "6e18a1eb.dbf44",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1972,8 +1945,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 880,
+        "x": 590,
+        "y": 780,
         "wires": []
     },
     {
@@ -1990,28 +1963,10 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1269.515625,
-        "y": 633.75,
+        "x": 530,
+        "y": 1060,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "e3f5ebb0.b4eb18",
-        "type": "function",
-        "z": "6e18a1eb.dbf44",
-        "name": "color fondo",
-        "func": "var valor = msg.payload;\nmsg.payload={};\n\nif (valor >= 0 && valor <= 40){\n    msg.payload.colorfondo= \"blue\";\n}\nelse if (valor >= 40 && valor <= 80){\nmsg.payload.colorfondo= \"yellow\";\n}\nelse if (valor >= 0 && valor <= 120){\nmsg.payload.colorfondo= \"red\";\n}\nmsg.payload.valor= valor;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 1090,
-        "y": 620,
-        "wires": [
-            [
-                "87bf4975.9e6628"
-            ]
         ]
     },
     {
@@ -2026,8 +1981,8 @@
         "label": "<font-size=24>CANBUS",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1260,
-        "y": 860,
+        "x": 500,
+        "y": 940,
         "wires": []
     },
     {
@@ -2047,11 +2002,12 @@
         "topic": "",
         "payload": "FALSE",
         "payloadType": "str",
-        "x": 970,
-        "y": 860,
+        "x": 230,
+        "y": 940,
         "wires": [
             [
-                "32ae64cf.6de76c"
+                "32ae64cf.6de76c",
+                "96bd2189.b3f64"
             ]
         ]
     },
@@ -2067,34 +2023,9 @@
         "label": "<font-size = 14>Telemetry",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1260,
-        "y": 900,
+        "x": 500,
+        "y": 980,
         "wires": []
-    },
-    {
-        "id": "165d54e6.9677cb",
-        "type": "inject",
-        "z": "6e18a1eb.dbf44",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "FALSE",
-        "payloadType": "str",
-        "x": 970,
-        "y": 900,
-        "wires": [
-            [
-                "96bd2189.b3f64"
-            ]
-        ]
     },
     {
         "id": "724c7c1.e5f1684",
@@ -2105,89 +2036,33 @@
         "order": 5,
         "width": "6",
         "height": "2",
-        "format": "\n\n<html>\n<body >\n\n<p style=\"font-size: 24px;\"> Oil Pressure: &nbsp;\n<span style=\"font-size: 58px;\">  {{msg.payload}} </span>\n<span style=\"font-size: 24px;\"> </span>\n</p>\n\n</body>\n</html>",
+        "format": "<div style=\"text-align: center;\">   \n<p>\n<span id=\"change3\" style=\"font-size: 38px;\"> Oil Press </span> \n<span id=\"change4\" style=\"font-size: 38px;\">  {{msg.payload.OilPress}} </span>\n<span id=\"change5\" style=\"font-size: 38px;\"> KPa </span>\n</p>\n</div>\n\n<script>\n(function(scope){\n    \n\n    scope.$watch('msg',function (msg){\n        \n       myData = msg;\n       var div = document.getElementById('change3');\n       div.style.backgroundColor = myData.payload.Color;\n    \n       var div = document.getElementById('change4');\n       div.style.backgroundColor = myData.payload.Color;\n       \n       var div = document.getElementById('change5');\n       div.style.backgroundColor = myData.payload.Color;\n       \n    });\n\n})(scope);\n\n</script>\n\n\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 700,
-        "y": 940,
+        "x": 600,
+        "y": 840,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "68d76cc6.8361b4",
-        "type": "inject",
-        "z": "6e18a1eb.dbf44",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "58",
-        "payloadType": "num",
-        "x": 410,
-        "y": 940,
-        "wires": [
-            [
-                "724c7c1.e5f1684"
-            ]
-        ]
-    },
-    {
-        "id": "96cc5451.3af9f8",
-        "type": "ui_led",
-        "z": "6e18a1eb.dbf44",
-        "order": 1,
-        "group": "50424f91.133e2",
-        "width": "2",
-        "height": "2",
-        "label": "Temperature",
-        "labelPlacement": "right",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
-        "name": "",
-        "x": 760,
-        "y": 780,
-        "wires": []
     },
     {
         "id": "8922270b.3abd18",
         "type": "function",
         "z": "6e18a1eb.dbf44",
         "name": "Aviso Temp",
-        "func": "var valor = msg.payload;\nmsg.payload={};\n\nif (valor >= 0 && valor <= 35){\n    msg.payload=true;\n}\nelse if (valor >= 40){\nmsg.payload=false;\n}\n\nreturn msg;",
+        "func": "var valor = msg.payload.Temperature;\nmsg.payload={};\n\nif (valor >= 0 && valor < 80){\n    msg.payload=true;\n}\nelse if (valor >= 80){\n    msg.payload=false;\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 570,
-        "y": 780,
+        "x": 430,
+        "y": 680,
         "wires": [
             [
-                "96cc5451.3af9f8"
+                "ea67d62a.76b2e8"
             ]
         ]
     },
@@ -2198,7 +2073,14 @@
         "name": "",
         "props": [
             {
-                "p": "payload"
+                "p": "payload.Temperature",
+                "v": "58",
+                "vt": "num"
+            },
+            {
+                "p": "payload.OilPress",
+                "v": "58",
+                "vt": "num"
             }
         ],
         "repeat": "",
@@ -2206,46 +2088,14 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "25",
-        "payloadType": "num",
-        "x": 410,
-        "y": 780,
+        "payloadType": "str",
+        "x": 210,
+        "y": 700,
         "wires": [
             [
                 "8922270b.3abd18",
-                "bc34841e.1a9af8"
-            ]
-        ]
-    },
-    {
-        "id": "6c6710e2.9d283",
-        "type": "inject",
-        "z": "6e18a1eb.dbf44",
-        "name": "",
-        "props": [
-            {
-                "p": "payload",
-                "v": "",
-                "vt": "date"
-            },
-            {
-                "p": "topic",
-                "v": "",
-                "vt": "string"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 200,
-        "y": 680,
-        "wires": [
-            [
-                "54bda67a.31ef88"
+                "bc34841e.1a9af8",
+                "48326c42.9c7fb4"
             ]
         ]
     },
@@ -2263,8 +2113,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 760,
-        "y": 680,
+        "x": 740,
+        "y": 460,
         "wires": [
             []
         ]
@@ -2276,8 +2126,8 @@
         "name": "",
         "action": "str",
         "property": "payload",
-        "x": 620,
-        "y": 640,
+        "x": 600,
+        "y": 460,
         "wires": [
             [
                 "d9b4c4f9.4e0cd8"
@@ -2294,11 +2144,110 @@
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 420,
-        "y": 680,
+        "x": 380,
+        "y": 460,
         "wires": [
             [
                 "b1ca0008.81539"
+            ]
+        ]
+    },
+    {
+        "id": "ea67d62a.76b2e8",
+        "type": "ui_led",
+        "z": "6e18a1eb.dbf44",
+        "order": 1,
+        "group": "50424f91.133e2",
+        "width": "6",
+        "height": "2",
+        "label": "<font size = 11>Alarma Temp",
+        "labelPlacement": "right",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Temp",
+        "x": 590,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "104b8223.f1ab6e",
+        "type": "ui_template",
+        "z": "6e18a1eb.dbf44",
+        "group": "50424f91.133e2",
+        "name": "Speed",
+        "order": 3,
+        "width": "6",
+        "height": "2",
+        "format": "\n\n<html>\n<body >\n\n<p style=\"font-size: 24px;\"> Speed: &nbsp;\n<span style=\"font-size: 58px;\">  {{msg.payload}} </span>\n<span style=\"font-size: 24px;\"> Km/h </span>\n</p>\n\n</body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 510,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fe7295a2.b30b08",
+        "type": "inject",
+        "z": "6e18a1eb.dbf44",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "60",
+        "payloadType": "num",
+        "x": 210,
+        "y": 1100,
+        "wires": [
+            [
+                "104b8223.f1ab6e"
+            ]
+        ]
+    },
+    {
+        "id": "48326c42.9c7fb4",
+        "type": "function",
+        "z": "6e18a1eb.dbf44",
+        "name": "color fondo",
+        "func": "var valor = msg.payload.OilPress;\nmsg.payload={};\n\nif (valor >= 0 && valor <= 40){\n    msg.payload.Color= \"green\";\n}\nelse if (valor > 40 && valor <= 80){\nmsg.payload.Color= \"blue\";\n}\nelse if (valor > 80 && valor <= 120){\nmsg.payload.Color= \"red\";\n}\nmsg.payload.OilPress= valor;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 840,
+        "wires": [
+            [
+                "724c7c1.e5f1684"
             ]
         ]
     }
