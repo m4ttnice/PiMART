@@ -1,0 +1,57 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>KiCad BOM Example 5</title>
+    </head>
+    <body>
+    <h1>U:\MART\Pi_Mart_PCB\Pi_MART\PI_MARTLOgger\PI_MARTLOgger.sch</h1>
+    <p>09/06/2021 3:48:19</p>
+    <p>Eeschema (5.1.8)-1</p>
+    <p><b>Component Count:</b>83</p>
+    <table>
+    <tr><th style='width:640px'>Ref</th><th>Qnty</th><th>Value</th><th>Part</th><th>Footprint</th><th>Description</th><th>Vendor</th></tr>
+    <tr><td>C1, C4</td><td>2</td><td>100u</td><td>Device:CP</td><td>Capacitor_SMD:CP_Elec_6.3x7.7</td><td>Polarized capacitor</td><td></td></tr>
+    <tr><td>C1_S2, C1_S3, C1_S4</td><td>3</td><td>C1</td><td>Device:C</td><td>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C1S1</td><td>1</td><td>1u</td><td>Device:C</td><td>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C2, C3</td><td>2</td><td>100n</td><td>Device:C</td><td>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C2_S1</td><td>1</td><td>3.9u</td><td>Device:C</td><td>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C2_S2, C2_S3, C2_S4</td><td>3</td><td>C2</td><td>Device:C</td><td>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C5, C6</td><td>2</td><td>.1u</td><td>Device:C</td><td>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>F1</td><td>1</td><td>Fuse</td><td>Device:Fuse</td><td>Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder</td><td>Fuse</td><td></td></tr>
+    <tr><td>J1</td><td>1</td><td>Nano (I2c-UART)</td><td>Connector:Conn_01x04_Female</td><td>Connector_Molex:Molex_Nano-Fit_105313-xx04_1x04_P2.50mm_Horizontal</td><td>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
+    <tr><td>J2</td><td>1</td><td>Con. Bateria</td><td>Connector:Conn_01x02_Female</td><td>Connector_Molex:Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal</td><td>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
+    <tr><td>J3</td><td>1</td><td>GPS</td><td>Connector:Conn_01x04_Female</td><td>Connector_Molex:Molex_Nano-Fit_105310-xx08_2x04_P2.50mm_Vertical</td><td>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
+    <tr><td>J4</td><td>1</td><td>Vumetro</td><td>Connector:Conn_01x03_Female</td><td>Connector_Molex:Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal</td><td>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
+    <tr><td>J5</td><td>1</td><td>Encoder Volante</td><td>Connector:Conn_01x03_Female</td><td>Connector_Molex:Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal</td><td>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
+    <tr><td>J6</td><td>1</td><td>Sens P. Aceite</td><td>Connector:Conn_01x03_Female</td><td>Connector_Molex:Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal</td><td>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
+    <tr><td>J7</td><td>1</td><td>A2</td><td>Connector:Conn_01x03_Female</td><td>Connector_Molex:Molex_Nano-Fit_105309-xx03_1x03_P2.50mm_Vertical</td><td>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
+    <tr><td>J8</td><td>1</td><td>A3</td><td>Connector:Conn_01x03_Female</td><td>Connector_Molex:Molex_Nano-Fit_105309-xx03_1x03_P2.50mm_Vertical</td><td>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
+    <tr><td>J_E1, J_RS1, J_RS2</td><td>3</td><td>Conn_01x03_Female</td><td>Connector:Conn_01x03_Female</td><td>Connector_Molex:Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal</td><td>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
+    <tr><td>JP1, JP2</td><td>2</td><td>SolderJumper_3_Bridged12</td><td>Jumper:SolderJumper_3_Bridged12</td><td>Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm</td><td>3-pole Solder Jumper, pins 1+2 closed/bridged</td><td></td></tr>
+    <tr><td>MK1, MK2, MK3, MK4</td><td>4</td><td>M2.5</td><td>PI_MARTLOgger-rescue:Mounting_Hole-Mechanical</td><td>MountingHole:MountingHole_2.7mm_M2.5</td><td></td><td></td></tr>
+    <tr><td>P1</td><td>1</td><td>Conn_02x20_Odd_Even</td><td>Connector_Generic:Conn_02x20_Odd_Even</td><td>Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical</td><td>Generic connector, double row, 02x20, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
+    <tr><td>Q1, Q2, Q3, Q4</td><td>4</td><td>BSS138</td><td>Transistor_FET:BSS138</td><td>Package_TO_SOT_SMD:SOT-23</td><td>50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23</td><td></td></tr>
+    <tr><td>R1, R2, R3, R4, R5, R6, R7, R8</td><td>8</td><td>10k</td><td>Device:R</td><td>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</td><td>Resistor</td><td></td></tr>
+    <tr><td>R1_S1, R3_S1</td><td>2</td><td>5.1k</td><td>Device:R</td><td>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</td><td>Resistor</td><td></td></tr>
+    <tr><td>R1_S2, R1_S3, R1_S4</td><td>3</td><td>R1</td><td>Device:R</td><td>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</td><td>Resistor</td><td></td></tr>
+    <tr><td>R2_S1</td><td>1</td><td>3.3k</td><td>Device:R</td><td>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</td><td>Resistor</td><td></td></tr>
+    <tr><td>R2_S2, R2_S3, R2_S4</td><td>3</td><td>R2</td><td>Device:R</td><td>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</td><td>Resistor</td><td></td></tr>
+    <tr><td>R3_S2, R3_S3, R3_S4</td><td>3</td><td>R3</td><td>Device:R</td><td>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</td><td>Resistor</td><td></td></tr>
+    <tr><td>RS1, RS2</td><td>2</td><td>RotSwitch</td><td>MART:RotSwitch</td><td>MART:Rot_Switch</td><td></td><td></td></tr>
+    <tr><td>RS1_R1, RS1_R2, RS1_R3, RS1_R4, RS1_R5, RS1_R6, RS1_R7, RS2_R1, RS2_R2, RS2_R3, RS2_R4, RS2_R5, RS2_R6, RS2_R7</td><td>14</td><td>2.2k</td><td>Device:R_Small</td><td>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</td><td>Resistor, small symbol</td><td></td></tr>
+    <tr><td>RS1_R8, RS2_R8</td><td>2</td><td>220k</td><td>Device:R_Small</td><td>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</td><td>Resistor, small symbol</td><td></td></tr>
+    <tr><td>SW1</td><td>1</td><td>SW_DIP_x01</td><td>Switch:SW_DIP_x01</td><td>Button_Switch_THT:SW_DIP_SPSTx01_Piano_10.8x4.1mm_W7.62mm_P2.54mm</td><td>1x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol</td><td></td></tr>
+    <tr><td>U1</td><td>1</td><td>DC-DC</td><td>MART:DC-DC</td><td>MART:DC-DC</td><td></td><td></td></tr>
+    <tr><td>U2</td><td>1</td><td>ADC</td><td>MART:ADC</td><td>MART:ADC</td><td></td><td></td></tr>
+    <tr><td>U3</td><td>1</td><td>LM324</td><td>Amplifier_Operational:LM324</td><td>Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</td><td>Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14</td><td></td></tr>
+    <tr><td>U4</td><td>1</td><td>CAN</td><td>MART:CAN</td><td>MART:CAN</td><td></td><td></td></tr>
+    <tr><td>U6</td><td>1</td><td>RTC</td><td>MART:RTC</td><td>MART:RTC</td><td></td><td></td></tr>
+    <tr><td>U8</td><td>1</td><td>IMU</td><td>MART:IMU</td><td>MART:IMU</td><td></td><td></td></tr>
+    <tr><td>U_E1</td><td>1</td><td>Encoder</td><td>MART:Encoder</td><td>MART:Encoder</td><td></td><td></td></tr><!--TABLEROW-->
+    </table>
+    </body>
+</html>
+    
