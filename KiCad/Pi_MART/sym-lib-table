@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name Pi_MART-rescue)(type Legacy)(uri ${KIPRJMOD}/Pi_MART-rescue.lib)(options "")(descr ""))
-)

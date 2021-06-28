@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name PI_MARTLOgger-rescue)(type Legacy)(uri ${KIPRJMOD}/PI_MARTLOgger-rescue.lib)(options "")(descr ""))
-)
