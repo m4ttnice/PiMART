@@ -1,0 +1,65 @@
+MART Electronics Systems Sponsored by JLCPCB 
+
+
+
+Design
+Pi MART (telemetry system)
+Nano-MART (inputs controller)
+
+
+
+
+Pi-MART
+
+The Pi-MART it’s a base-on RPI telemetry system, suited for a formula-style vehicle (FStudent). The principal function of the device (Pi-MART) is to read, process and store data from different sensors, placed on the PCB or in the vehicle.
+
+Hardware:
+
+The hardware components of the system are: In first place the RPI 3b+ it’s the brain of the system and the Pi-MART (PCB) as expansion module, which holds some on-board sensors, connectors for Inputs-Outputs and signal-process management for an DAC placed on-board.
+
+As capabilities the Pi-MART have the following utilities: 
+Built-in sensors-subsystems 
+1x RTC module based on the DS3231 chip with built-in battery and i2c-Bus communication.
+1x IMU module accelerometer-gyroscope and motion-preprocessor based on an MPU6050 with i2c-Bus communication.
+4x channel ADC based on ADS1115 and i2c-Bus communication.
+4x LP 2ºnd order Chebyshev-filter (Sallen-Key config.) for smoothing Analog-input signals, reducing noise and PWM read capable.
+CAN-Bus transiever-reciever based on MCP2515-TJA1050 chips, SPI communication with the RPI.
+Logic conversor (bidireccional 3.3-5v) for i2c and UART busses (support 3.3 and 5v sensors actuators on that busses.
+Connector expansion to attach a GPS module like NEOx series(not tested yet).
+Built-in CC-CC conversor 8-36v to 5v 3A.
+UART-i2c (selectable) connector for communications with the Nano-MART.
+5 inch HDMI touch-screen placed on the cockpit of the vehicle.
+ Connector for external ws2812b direccionable led strip (RPM counter)
+Digital absolute encoder for mesurement of the angle on the steering-system (signal in PWM 1024states, readed on the prefiltered DAC).
+Software:
+PI-MART uses the last official release of Raspbian for operative system. The data-logger system runs on a custom Node-Red application (JavaScript) which manages all subsystems, synchronizes the data and stores it on the SD-car as CSV file. Also generates the UI, to show real-time data splashed on the screen.
+
+
+
+
+
+
+
+
+
+
+Nano-MART
+
+It’s a sub-system of the PI-MART telemetry system, powered by an arduino-Nano v3.0, placed on the steering wheel of the vehicle. The main function of the device is to manage and convert the state of the inputs (up to 8 to 10 Buttons and 2 to 4 analog devices). The data it’s converted to an ID (represents the current analog input or the digital array) and a digital number (represents the current value of the analog port or the state of all digital pins declared). Once the data is readed and processed it’s sent on demand to the RPI on i2c or UART busses (selectable on the PCB and software).
+
+The Nano-MART also contains up to four (really used 2 of them) external PCB to hold a rotary switch (6pos) and transform the signal to analog. The main function of this switch is to select different options and control the behavior of the Pi-MART in real time from the pilot seat.
+
+
+
+
+
+BSPD (Brake system plausibility device) it’s a security system designed under the specifications of the F-Student rules for the season 2020-21. Some of the requirements are:
+A stand-alone system (not depends on another system, except the low-voltage protection device)
+Not programmable components or subsystems.
+read the state of the brake and accelerator controllers. If the state of the sensors gets over a predetermined umbral(no lock wheels for brake and over 25% of the accelerator), the Condition it’s triggered.
+If the Condition it’s true over a 500ms (consecutives) (adjustable) the vehicle shuts down the fuel pump and ignition system.
+If the BSPD triggers ON can be reseted before 10 seconds (adjustable) if the condition switches to False. Over the predetermined time only can be reset by a power-cycle.
+The two sensors need to be checked for short-circuit to vcc and gnd or disconnections, if any of these states is reached, the BSPD triggers ON (switch down the vehicle) immediately (not 10s autoreset allowed).   
+
+Design
+The design, schematics, circuit trace diagrams, gerbers and any other documentation related to the BSPD project are property of MART-Formula students and the actual designers of the project. And are classified as CONFIDENCIAL. However the system it’s based on comparing the state of the sensors (analogs ones) with a determined number of reference signals. The result of these read it’s processed by logic operations and triggered by two adjustable timers (500ms and 10s). The shut-down circuit (which turns the engine off) it’s controlled by a SSR.   
